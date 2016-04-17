@@ -1,0 +1,26 @@
+.tabs-royal > .tabs,
+.tabs.tabs-royal {
+    color: #6b46e5;
+    background-color: #FFF;
+}
+
+.myTabStyle {
+    background-color: #6b46e5;
+    color: #FFF;
+}
+
+.myTabStyle .tab-item .tab-item-active {
+    color: #FFF;
+}
+
+.tabs-striped .tabs {
+    color: #6b46e5;
+    background-color: #FFF;
+}
+
+.tabs-striped .tab-item.tab-item-active,
+.tabs-striped .tab-item.active,
+.tabs-striped .tab-item.activated {
+    border-color: #6b46e5;
+    border-width: 0 0 2px 0;
+}

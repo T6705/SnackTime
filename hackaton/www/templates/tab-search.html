@@ -1,0 +1,46 @@
+<style>
+.image {
+    width: 90px;
+    height: 90px;
+}
+
+.name {
+    display: inline;
+    vertical-align: top;
+}
+
+.description {
+    display: inline;
+}
+</style>
+<ion-view view-title="Search">
+    <ion-content>
+        <ul class="list">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="data.keyboard" ng-keyup="search()">
+            </label>
+            <a class="item item-thumbnail-left" href="#" ng-repeat="product in productlist" ng-click="goToDetail(product)">
+                <img ng-src="{{product.ImgResult}}">
+                <div class="row">
+                    <h2>{{product.name}}</h2>
+                </div>
+                <div class="row">
+                    <p>Brand: {{product.brand}}</p>
+                </div>
+                <div class="row">
+                    <p>Type: {{product.name}}</p>
+                </div>
+                <div class="row">
+                    <p>Price: {{product.price}}</p>
+                </div>
+                <div class="row">
+                    <span>
+                    <i class="ion-thumbsup"></i> {{product.like}}
+                    <i class="ion-thumbsdown"></i>  {{product.dislike}}
+                    </span>
+                </div>
+            </a>
+        </ul>
+    </ion-content>
+</ion-view>

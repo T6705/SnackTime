@@ -1,0 +1,47 @@
+<style>
+.image {
+    width: 90px;
+    height: 90px;
+}
+
+.name {
+    display: inline;
+    vertical-align: top;
+}
+
+.description {
+    display: inline;
+}
+</style>
+<ion-view view-title="Category">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goToSearch()">
+            <i class="icon ion-ios-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ul class="list">
+            <a class="item item-thumbnail-left" href="#" ng-repeat="product in productlist" ng-click="goToDetail(product)">
+                <img ng-src="{{product.ImgResult}}">
+                <div class="row">
+                    <h2>{{product.name}}</h2>
+                </div>
+                <div class="row">
+                    <p>Brand: {{product.name}}</p>
+                </div>
+                <div class="row">
+                    <p>Type: {{product.name}}</p>
+                </div>
+                <div class="row">
+                    <p>Price: {{product.price}}</p>
+                </div>
+                <div class="row">
+                    <span>
+                    <i class="ion-thumbsup"></i> {{product.likes}}
+                    <i class="ion-thumbsdown"></i>  {{product.dislikes}}
+                    </span>
+                </div>
+            </a>
+        </ul>
+    </ion-content>
+</ion-view>

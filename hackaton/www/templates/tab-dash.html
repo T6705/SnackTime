@@ -1,0 +1,133 @@
+<style type="text/css">
+.padding {
+    
+    background-color: rgb(210, 210, 210);
+}
+
+#background {
+    background: url(../www/img/background.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 70% 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 400px;
+}
+
+#header {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 48px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+#header2 {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 36px;
+    text-align: center;
+}
+
+#header3 {
+    color: #;
+    text-align: center;
+}
+
+
+.image {
+    background: url(../www/img/product1.jpg);
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    font-size: 32px;
+}
+
+.list {
+    width: 100%;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.button {
+    background-color: #886aea;
+    float: right;
+    margin-right: 5px;
+}
+
+.placeholder-icon {
+    color: #FFF;
+}
+
+img{
+	width: 175px;
+    height: 175px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.cake{
+	float:left;
+}
+
+.candy{
+	float:right;
+	
+}
+
+.chips{
+	float:left;
+	margin-top: 5px;
+}
+
+.cookie{
+	float:right;
+	margin-top: 5px;
+}
+</style>
+<ion-view view-title="Snack Time">
+    <ion-content class="padding">
+        <div id="background">
+            <li class="item" id="header">
+                Snack Time
+            </li>
+            <li class="item" id="header2">
+                Snack Time
+            </li>
+            <form ng-submit="formlogin()">
+                <div class="list list-inset" id="search">
+                    <div class="item item-input">
+                        <input type="text" placeholder="Search">
+                        <button class="button">
+                            <i class="icon ion-search placeholder-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h1 id="header3">Guest</h1>
+        <h2 id="header3">Please Search Your Snack</h2>
+        <div class="wrapper">
+            <img class="cake" src="../www/img/snack/cake.jpg" ng-click="goToCat(cake)">
+        </div>
+        <div class="wrapper">
+            <img class="candy" src="../www/img/snack/candy.jpg" ng-click="goToCat(candy)">
+        </div>
+
+       <div class="wrapper">
+            <img class="chips" src="../www/img/snack/chips.jpg" ng-click="goToCat(chips)">
+        </div>
+        <div class="wrapper">
+            <img class="cookie" src="../www/img/snack/cookie.jpg" ng-click="goToCat(cookie)">
+        </div>
+        
+    </ion-content>
+</ion-view>

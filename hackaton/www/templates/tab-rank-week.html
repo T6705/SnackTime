@@ -1,0 +1,38 @@
+<style type="text/css">
+    .icon{
+        color: #6b46e5;
+    }
+  .img{
+    width:90px;
+    height: 90px;
+    float: left;
+  }
+  .description{
+    display: inline;
+    vertical-align: top;
+    float:left;
+    padding-left: 10px
+
+  }
+
+  .item-icon-left{
+    padding-left:0px;
+  }
+
+</style>
+<ion-view view-title="Weekly Ranking">
+    <ion-content>
+        <div class="list" >
+            <a class="item item-icon-left" href="#" ng-repeat="rank in ranklist">
+                <img class="img" ng-src="{{rank.ImgResult}}">
+                <div class="description">
+                    <h2>{{rank.name}}</h2>
+                    <p>Price: {{rank.price}}</p>
+                    <span>
+                    <i class="ion-thumbsup"></i> {{rank.likes}}
+                    </span>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

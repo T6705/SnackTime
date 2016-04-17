@@ -1,0 +1,106 @@
+<style>
+.image {
+    width: 90px;
+    height: 90px;
+}
+
+.name {
+    display: inline;
+    vertical-align: top;
+}
+
+.description {
+    display: inline;
+}
+
+.row {
+    height: 90px;
+    margin-bottom: 40px;
+}
+
+.col {
+    text-align: center;
+    height: 90px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: #FFF;
+    opacity: 0.3;
+}
+
+.active {
+    opacity: 1;
+}
+
+#circleicon {
+    font-size: 24px
+}
+.tabs-royal > .tabs, .tabs.tabs-royal{
+    background-color: #6b46e5;
+    color: #FFF;
+}
+</style>
+<ion-view view-title="{{product.name}}">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goToSearch()">
+            <i class="icon ion-ios-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <img class="full-image" ng-src="{{product.ImgResult}}">
+            <div class="row">
+                <div class="col col-25">
+                    <div class="circle active" style="background-color: #D50000">{{product.like}}
+                        <br> <i class="ion-chatbubble-working" id="circleicon"></i></div>
+                </div>
+                <div class="col col-25">
+                    <div class="circle active" style="background-color: #C51162">{{product.like}}
+                        <br> <i class="icon ion-star" id="circleicon"></i></div>
+                </div>
+                <div class="col col-25">
+                    <div ng-class=" true ? 'circle' : 'circle active'" style="background-color: #AA00FF" ng-click="addLike(product)">{{product.like}}
+                        <br> <i class="icon ion-thumbsup" id="circleicon"></i></div>
+                </div>
+                <div class="col col-25">
+                    <div ng-class=" true ? 'circle' : 'circle active'" style="background-color: #0091EA" ng-click="delete(product)">{{product.like}}
+                        <br> <i class="icon ion-thumbsdown" id="circleicon"></i></div>
+                </div>
+            </div>
+            <ion-tabs class="tabs-icon-left tabs-royal">
+                <ion-tab title="Product" icon-off="ion-information" icon-on="ion-information">
+                    <ion-nav-view>
+                        <ul class="list">
+                            <div class="item item-icon-left" href="#">
+                                <i class="icon ion-email"></i> Product Name: {{product.name}}
+                            </div>
+                            <div class="item item-icon-left" href="#">
+                                <i class="icon ion-email"></i> Brand Name : {{product.brand}}
+                            </div>
+                            <div class="item item-icon-left" href="#">
+                                <i class="icon ion-email"></i> Price : {{product.price}}
+                            </div>
+                            <div class="item item-icon-left" href="#">
+                                <i class="icon ion-email"></i> Type : {{product.name}}
+                            </div>
+                        </ul>
+                    </ion-nav-view>
+                </ion-tab>
+                <ion-tab title="Comment" icon-off="ion-chatbox-working" icon-on="ion-chatbox-working">
+                    <ion-nav-view>
+                        <ul class="list">
+                            <div class="item item-avatar" href="#">
+                                <img ng-src="{{product.ImgResult}}">
+                                <h2>Venkman</h2>
+                                <p>Nice Food</p>
+                            </div>
+                        </ul>
+                    </ion-nav-view>
+                </ion-tab>
+            </ion-tabs>
+        </ion-list>
+    </ion-content>
+</ion-view>
